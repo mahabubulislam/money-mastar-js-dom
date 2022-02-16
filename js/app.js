@@ -13,3 +13,17 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     const balance = document.getElementById('balance');
     const balanceAmount = balance.innerText =incomeAmount-expensesAmount;
 })
+document.getElementById('save-btn').addEventListener('click',function(){
+    const saveInput = document.getElementById('save');
+    const savingValue = Number(saveInput.value);
+    const saving = document.getElementById('saving-amount');
+    const incomeInput = document.getElementById('income');
+    const incomeAmount = Number(incomeInput.value);
+    const savingTotal = incomeAmount*(savingValue/100);
+    const savingAmount = saving.innerText=savingTotal;
+    const balance = document.getElementById('balance').innerText;
+    const balanceAmount = Number(balance);
+    const remainingBalance = document.getElementById('remaining-balance')
+    const totalRemainingBalance = remainingBalance.innerText = balanceAmount-savingAmount;
+
+})
